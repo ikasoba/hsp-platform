@@ -1,0 +1,14 @@
+#define __PLATFORM_LINUX__ (hspstat & $1000)
+#define __PLATFORM_MACOS__ (hspstat & $80)
+#define __PLATFORM_DISH__  (hspstat & $100)
+#define __PLATFORM_WIN32__ (__PLATFORM_LINUX__ == 0 & __PLATFORM_MACOS__ == 0 & __PLATFORM_DISH__ == 0)
+
+#define __RUNTIME_UTF8__  (hspstat & $20000)
+#define __RUNTIME_X64__   (hspstat & $40000)
+
+mes __PLATFORM_WIN32__
+mes __PLATFORM_LINUX__
+mes __PLATFORM_MACOS__
+mes __PLATFORM_DISH__
+mes __RUNTIME_UTF8__
+mes __RUNTIME_X64__
