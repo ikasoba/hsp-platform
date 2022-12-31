@@ -1,0 +1,8 @@
+
+/// linux版hspなら終了コード 0
+
+#runtime "hsp3cl"
+
+#include "platform.hsp"
+
+end __PLATFORM_LINUX__ == 0
